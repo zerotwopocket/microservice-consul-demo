@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    consul:
+      discovery:
+        instance-id: "${spring.application.name}:${random.int[1,999999]}"
+      config:
+        enabled: false
+  application:
+    name: customer-service
+
+server:
+  port: 0
